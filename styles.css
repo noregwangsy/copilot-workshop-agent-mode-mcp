@@ -267,12 +267,35 @@ button {
 
 .todo-footer {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   padding: 17px 40px 22px;
   color: var(--color-muted);
   border-top: 1px solid var(--color-border);
   font-family: "Trebuchet MS", sans-serif;
   font-size: 0.82rem;
+}
+
+.clear-completed-button {
+  padding: 7px 9px;
+  color: var(--color-accent-dark);
+  background: transparent;
+  border: 1px solid var(--color-accent);
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.76rem;
+}
+
+.clear-completed-button:hover:not(:disabled) {
+  color: var(--color-card);
+  background: var(--color-accent);
+}
+
+.clear-completed-button:disabled {
+  color: var(--color-muted);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .visually-hidden {
