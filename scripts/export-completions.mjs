@@ -26,6 +26,7 @@ const argv = process.argv.slice(2);
 const argOf = (name, fallback = null) => {
   const i = argv.indexOf(name);
   return i >= 0 && argv[i + 1] ? argv[i + 1] : fallback;
+  
 };
 const extraLabel = argOf('--label');
 const repoArg = argOf('--repo');
